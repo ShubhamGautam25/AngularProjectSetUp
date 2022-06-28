@@ -15,7 +15,7 @@ export class AuthGuard implements CanActivate {
     if (this._cookie.get("access_id") && this._cookie.get("access_token")) {
       return true;
     } else {
-      window.location.href = environment.dashboard_v1;
+      window.location.href = environment.pbmDashboard;
       return false;
     }
   }

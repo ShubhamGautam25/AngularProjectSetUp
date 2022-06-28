@@ -6,7 +6,7 @@ export const environment = {
   production: false,
   name: 'local',
   // need to change the path from PBM page
-  dashboard_v1 : 'https://www.google.com/' ,
+  pbmDashboard : 'https://www.google.com/' ,
   REST_APIS: "http://localhost:8000/",
 };
 

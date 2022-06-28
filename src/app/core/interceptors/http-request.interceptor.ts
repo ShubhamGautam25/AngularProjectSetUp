@@ -15,7 +15,7 @@ export class HttpRequestInterceptor implements HttpInterceptor {
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     return next.handle(request).pipe(catchError((error: HttpErrorResponse) => {
         if (error.status == 401) {
-          window.location.href = environment.dashboard_v1 + 'logout';
+          window.location.href = environment.pbmDashboard + 'logout';
           return EMPTY;
         } else if(error.status == 403 || error.status == 500) {
           // this._toastr.error(error.statusText);
